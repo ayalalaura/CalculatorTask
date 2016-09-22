@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet">
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+</head>
+
+<body>
+<h2>My First Calculator</h2>
+<br>
+<form name="Calc">
+<table border=8>	
+	<tr>
+		<td colspan=4><center><input type="text" id="iknew" name="input" value="Hello!" Size="60"></center></td>
+	</tr>
+
+	<tr>
+	<td><input class="numbers" type="button" name="clear" value="C" onclick="Calc.input.value=''"></td>
+	<td><input class="numbers" type="button" name="division" value="/" onclick="Calc.input.value+='/'"></td>
+	<td><input class="numbers" type="button" name="multiply" value="*" onclick="Calc.input.value+='*'""></td>
+	<td><input class="numbers" type="button" name="clear" value="Avg" onclick="average();"></td>
+	</tr>
+
+	<tr>
+	<td><input class="numbers" type="button" name="seven" value="7" onclick="Calc.input.value+='7'"></td>
+	<td><input class="numbers" type="button" name="eight" value="8" onclick="Calc.input.value+='8'"></td>
+	<td><input class="numbers" type="button" name="nine" value="9" onclick="Calc.input.value+='9'"></td>
+	<td><input class="numbers" type="button" name="minus" value="-" onclick="Calc.input.value+='-'"></td>
+	</tr>
+
+	<tr>
+	<td><input class="numbers" type="button" name="four" value="4" onclick="Calc.input.value+='4'"></td>
+	<td><input class="numbers" type="button" name="five" value="5" onclick="Calc.input.value+='5'"></td>
+	<td><input class="numbers" type="button" name="six" value="6" onclick="Calc.input.value+='6'"></td>
+	<td><input class="numbers" type="button" name="sum" value="+" onclick="Calc.input.value+='+'"></td>
+	</tr>
+
+	<tr>
+	<td><input class="numbers" type="button" name="one" value="1" onclick="Calc.input.value+='1'"></td>
+	<td><input class="numbers" type="button" name="two" value="2" onclick="Calc.input.value+='2'"></td>
+	<td><input class="numbers" type="button" name="three" value="3" onclick="Calc.input.value+='3'"></td>
+	<td><input class="numbers" type="button" name="hearts" value="&#9829;" onclick="Calc.input.value+='&#9829;'"></td>
+	</tr>
+
+	<tr>
+	<td><input class="numbers" type="button" name="zero" value="0" onclick="Calc.input.value +='0'"></td>
+	<td><input class="numbers" type="button" name="dot" value="." onclick="Calc.input.value +='.'"></td>
+	<td><input class="numbers" type="button" name="smiley" value="&#x1F601;" onclick="Calc.input.value+='&#x1F601;'"></td>
+	<td><input class="numbers" type="button" name="equals" value="=" onclick="Calc.input.value=eval(Calc.input.value)"></td>
+	</tr>
+
+</table>
+</form>
+
+<footer><a href="http://www.enchantedlearning.com/jokes/topics/math.shtml" target="_blank"> Math Joke of the Day: What do mathematicians eat on Halloween? Pumpkin Pi <i class="em em-joy"></i></a> </footer>
+
+<script type="text/javascript">
+	function average()
+	{ 
+		var number = document.getElementById("iknew").value;
+		var array = number.split('+');
+		var total=0;
+		for(var i=0; i<array.length; i++){
+			total+=Number(array[i]);
+		} 
+		var avg = total/array.length;
+		document.getElementById("iknew").value = avg;
+	}
+</script>
+
+</body>
+
+<style type="text/css">
+body {
+	background: url(http://www.kidsfirstchristian.com/wp-content/uploads/2014/12/background.jpg);
+	background-size: cover;
+	font-family: 'Coming Soon', cursive;
+}
+h2 {
+	font-weight: bold;
+	font-size: 80px;
+	color: red;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+table {
+	background: red;
+	background-position: center;
+	width: 505px;
+	height: 450px;
+	padding: 20px;
+	margin: 0 auto;
+	border-color: yellow;
+	border-radius: 10px;
+}
+#iknew {
+	height: 40px;
+	width: 600px;
+	font-size: 20px;
+}
+.numbers {
+	height: 65px;
+	width: 147px;
+	padding: 20px;
+	border-style: solid;
+	border-color: green;
+	object-position: left;
+	font-size: 25px;
+	color: white;
+	text-align: center;
+	background-color: blue;
+	float: left;
+}
+td {
+	border-radius: 10px;
+}
+footer {
+	font-weight: bold;
+	font-size: 20px;
+	float: right;
+	margin-top: 60px;
+	margin-right: 20px;
+	background: rgba(240,248,255,.8);
+}
+a {
+	color: rgb(255,69,0);
+}
+.numbers, #iknew, body, a:hover {
+	cursor: url(http://cur.cursors-4u.net/games/gam-11/gam1088.cur), progress !important;
+}
+</style>
+
+</html>
